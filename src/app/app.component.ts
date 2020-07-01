@@ -11,6 +11,7 @@ export class AppComponent {
   PI : number = Math.PI;
   Porcentaje: number = 0.234;
   salario: number = 1234.5;
+  fecha:Date = new Date();
 
   valorpromesa = new Promise<string>((resolve) => {
     setTimeout(() => {

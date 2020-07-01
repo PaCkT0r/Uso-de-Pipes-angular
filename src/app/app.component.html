@@ -103,6 +103,34 @@
           <th>{{valorpromesa | async }}</th>
         </tr>
       </tbody>
+      <tbody>
+        <tr>
+          <th>{{fecha}}</th>
+          <th>fecha</th>
+          <th>{{fecha }}</th>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th>{{fecha}}</th>
+          <th>fecha:medium</th>
+          <th>{{fecha | date:'medium' }}</th>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th>{{fecha}}</th>
+          <th>fecha:short</th>
+          <th>{{fecha | date:'short' }}</th>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th>{{fecha}}</th>
+          <th>fecha:personalizado</th>
+          <th>{{fecha | date:'MMMM -dd' }}</th>
+        </tr>
+      </tbody>
     </table>
 
     <h2>Slice</h2>
