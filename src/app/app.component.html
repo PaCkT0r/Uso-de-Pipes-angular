@@ -40,6 +40,13 @@
       </tbody>
       <tbody>
         <tr>
+          <th>{{nombre2Capitalizador}}</th>
+          <th>Pipe capitalizador personalizado</th>
+          <th>{{nombre2Capitalizador | capitalizado }}</th>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
           <th>{{arreglo}}</th>
           <th>slice:1:5</th>
           <th>{{arreglo | slice:1:5 }}</th>
@@ -130,6 +137,17 @@
           <th>fecha:personalizado</th>
           <th>{{fecha | date:'MMMM -dd' }}</th>
         </tr>
+
+        <tr>
+          <td>{{ nombre }}</td>
+          <td>   contrasena:{{activar }}
+          <br>
+          <button class="btn btn-outline-primary" (click)="btnActive()">
+            Activar/Desactivar
+          </button>
+          </td>
+          <td>{{ nombre | activarpassword:true }}</td>
+        </tr>
       </tbody>
     </table>
 
@@ -146,6 +164,14 @@
         <pre>
         {{ heroe | json }}
       </pre>
+      </div>
+    </div>
+    <h3 class="mt-4">Domseguro</h3>
+    <hr>
+    <div class="row mb-5">
+      <div class="col">
+        <iframe width="560" height="315" [src]="videoUrl | domseguro" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
   </div>
