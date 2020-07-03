@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TimeoutError } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,7 @@ export class AppComponent {
   salario: number = 1234.5;
   fecha:Date = new Date();
   videoUrl: string = 'https://www.youtube.com/embed/M5QY2_8704o';
-  activar : boolean = true;
+  activar: boolean = false;
 
   valorpromesa = new Promise<string>((resolve) => {
     setTimeout(() => {
@@ -30,9 +31,5 @@ export class AppComponent {
       calle: 'primera',
       casa: 20
     }
-  }
-
-  btnActive(){
-    console.log(this.activar);
   }
 }

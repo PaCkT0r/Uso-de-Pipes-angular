@@ -4,17 +4,12 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'activarpassword'
 })
 export class ActivarpasswordPipe implements PipeTransform {
+  
+  cifrado: string[] = [];
 
-  transform(value: string, textoNormal: boolean = true): string {
-    let valorLongitud = 0;
-    let longitud = value.length;
-    for (let index = 0; index <= longitud; index++) {
-      valorLongitud = index
-    }
-    if ( textoNormal == true ) {
-        return value;
-    }
-    return  longitud.toString();
+  transform(value: string, mostrar: boolean = false): string {
+    // uso de operador ternario, 3 argumentos que toma, mucho mas rapido y legible
+    return ( mostrar ) ? '*'.repeat( value.length ) : value;
   }
 
 }
